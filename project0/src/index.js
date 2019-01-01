@@ -16,20 +16,24 @@ const App = () => {
                     .image
                     .avatar()}/>
             </ApprovalCard>
-            <CommentDetail
-                name={faker
-                .name
-                .lastName()}
-                avatar={faker
-                .image
-                .avatar()}/>
-            <CommentDetail
-                name={faker
-                .name
-                .lastName()}
-                avatar={faker
-                .image
-                .avatar()}/>
+            <ApprovalCard >
+                <CommentDetail
+                    name={faker
+                    .name
+                    .lastName()}
+                    avatar={faker
+                    .image
+                    .avatar()}/>
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail
+                    name={faker
+                    .name
+                    .lastName()}
+                    avatar={faker
+                    .image
+                    .avatar()}/>
+            </ApprovalCard>
         </div>
     );
 };
