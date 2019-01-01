@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
 
 class App extends React.Component {
     constructor(props) {
@@ -24,7 +25,7 @@ class App extends React.Component {
     componentDidUpdate() {
         console.log("update");
     }
-    
+
     render() {
         if (this.state.errMessage && !this.state.latitude) {
             return <div>Error :{this.state.errMessage}</div>;
@@ -32,7 +33,7 @@ class App extends React.Component {
         if (!this.state.errMessage && this.state.latitude) {
             return <SeasonDisplay lat={this.state.latitude} />
         }
-        return <div>Loading!</div>;
+        return <Spinner />;
     }
 }
 
