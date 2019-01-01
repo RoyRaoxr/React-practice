@@ -1,27 +1,35 @@
-import React from 'react'
+import React from 'react';
 import ReactDOM from 'react-dom';
+import CommentDetail from './CommentDetail';
+import faker from 'faker';
 
-class App extends React.Component {
-    render() {
-        return (
-            <div>
-                <Greeting kk="kitty" aa="AA"/>
-            </div>
-        );
-    }
-}
-
-function Greeting(props) {
+const App = () => {
     return (
-        <span>
-            <h2>Happy new year! <br />{props.kk}, {props.aa}</h2>
-        </span>
+        <div className="ui container comments">
+            <CommentDetail
+                name={faker
+                .name
+                .lastName()}
+                avatar={faker
+                .image
+                .avatar()}/>
+            <CommentDetail
+                name={faker
+                .name
+                .lastName()}
+                avatar={faker
+                .image
+                .avatar()}/>
+            <CommentDetail
+                name={faker
+                .name
+                .lastName()}
+                avatar={faker
+                .image
+                .avatar()}/>
+        </div>
     );
-}
-
+};
 
 ReactDOM.render(
-    <App />,
-    document.getElementById("root")
-);
-
+    <App/>, document.getElementById('root'));
