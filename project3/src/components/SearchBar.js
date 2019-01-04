@@ -3,7 +3,7 @@ import React from 'react';
 
 class SearchBar extends React.Component {
     state = {
-        term: 'nmsl'
+        term: '孙笑川'
     };
 
     onInputChange = event => {
